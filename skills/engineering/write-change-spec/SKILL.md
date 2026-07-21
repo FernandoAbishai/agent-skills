@@ -14,8 +14,7 @@ Use [`templates/change-specification.md`](templates/change-specification.md) as 
 
 Synthesize:
 
-- `$ARGUMENTS`;
-- the current conversation;
+- the user's request and current conversation;
 - issue, PRD, or request text;
 - decisions from `clarify-change`;
 - verified repository constraints from `setup-engineering-context`;
