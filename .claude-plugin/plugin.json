@@ -1,0 +1,22 @@
+{
+  "name": "fa-engineering",
+  "version": "0.1.0",
+  "description": "Evidence-driven software engineering workflows for Claude Code.",
+  "author": {"name": "Fernando Abishai", "url": "https://fernandoabishai.github.io/"},
+  "homepage": "https://github.com/FernandoAbishai/agent-skills",
+  "repository": "https://github.com/FernandoAbishai/agent-skills",
+  "license": "MIT",
+  "keywords": ["software-engineering", "agent-skills", "coding-agents", "debugging", "code-review", "testing"],
+  "skills": [
+    "./skills/engineering/fernandoabishai",
+    "./skills/engineering/setup-engineering-context",
+    "./skills/engineering/clarify-change",
+    "./skills/engineering/write-change-spec",
+    "./skills/engineering/plan-delivery",
+    "./skills/engineering/implement-change",
+    "./skills/engineering/debug-with-evidence",
+    "./skills/engineering/review-change",
+    "./skills/engineering/verify-system",
+    "./skills/engineering/ship-with-evidence"
+  ]
+}
