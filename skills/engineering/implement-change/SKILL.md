@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 # Implement a Planned Change
 
-Implement `$ARGUMENTS` one approved slice at a time. Do not optimize for the number of files changed or for reaching a final answer quickly; optimize for short feedback distance between a behavior claim and evidence.
+Implement the user's approved specification or delivery plan one approved slice at a time. Do not optimize for the number of files changed or for reaching a final answer quickly; optimize for short feedback distance between a behavior claim and evidence.
 
 Use [`templates/evidence-packet.md`](templates/evidence-packet.md) for each non-trivial slice.
 
