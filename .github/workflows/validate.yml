@@ -19,10 +19,9 @@ jobs:
         uses: actions/setup-python@v5.6.0
         with:
           python-version: "3.12"
-          cache: pip
 
-      - name: Install validator dependencies
-        run: python -m pip install --require-hashes -r requirements-validation.txt
+      - name: Install validator dependency
+        run: python -m pip install PyYAML==6.0.2
 
       - name: Validate skill structure, manifests, metadata, and links
         run: python scripts/validate.py
