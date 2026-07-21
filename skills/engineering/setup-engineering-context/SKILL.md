@@ -10,18 +10,28 @@ Inspect before writing. Discover build, test, lint, format, typecheck, developme
 
 Use this source order: explicit user instruction, repository documentation and CI, executable configuration, observed convention, then labeled inference.
 
-Create or update a compact context set under `docs/agent/`:
+First produce a compact in-conversation context report covering:
 
-- `PROJECT.md`: purpose, architecture map, domain language, trust boundaries.
-- `COMMANDS.md`: exact commands, prerequisites, scope, and verification status.
-- `DECISIONS.md`: durable decisions and ADR links.
-- `ISSUE-TRACKER.md`: issue workflow and status meanings.
+- project purpose, architecture map, domain language, and trust boundaries;
+- exact commands, prerequisites, scope, and verification status;
+- durable decisions and ADR links;
+- issue workflow and status meanings;
+- unresolved uncertainty.
+
+Persist context under `docs/agent/` only when the user requests it, the repository already uses that convention, or the task explicitly establishes durable onboarding documentation. When persistence is justified, use:
+
+- `PROJECT.md`;
+- `COMMANDS.md`;
+- `DECISIONS.md`;
+- `ISSUE-TRACKER.md`.
+
+Do not add repository files merely because this skill was invoked.
 
 Verify the cheapest safe commands. Mark each as verified, discovered but not run, unavailable, or already failing. Never report a command as verified merely because it appears in configuration.
 
 ## Completion criterion
 
-Another agent can locate the project context, run the correct checks, and identify unresolved uncertainty without repeating repository discovery.
+Another agent can locate or reproduce the project context, run the correct checks, and identify unresolved uncertainty without repeating unnecessary repository discovery.
 
 ## Communication
 
