@@ -1,0 +1,6 @@
+interface:
+  display_name: "Plan software delivery"
+  short_description: "Break approved work into vertical, reversible, verifiable slices."
+  default_prompt: "Use $plan-delivery to divide this approved change into dependency-aware vertical slices with verification and rollback."
+policy:
+  allow_implicit_invocation: false
