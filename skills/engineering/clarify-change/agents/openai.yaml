@@ -1,0 +1,6 @@
+interface:
+  display_name: "Clarify a software change"
+  short_description: "Resolve behavior, scope, safety, and proof decisions before planning."
+  default_prompt: "Use $clarify-change to resolve the load-bearing decisions in this software change before specification or implementation."
+policy:
+  allow_implicit_invocation: false
