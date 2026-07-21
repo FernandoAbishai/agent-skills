@@ -1,0 +1,5 @@
+interface:
+  display_name: "Engineering workflow router"
+  short_description: "Route engineering work to the smallest evidence-driven workflow."
+policy:
+  allow_implicit_invocation: false
