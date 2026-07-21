@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 # Plan Delivery
 
-Transform `$ARGUMENTS` or an approved specification into the smallest sequence of independently useful, independently verifiable increments.
+Transform the user's request or an approved specification into the smallest sequence of independently useful, independently verifiable increments.
 
 Use [`templates/vertical-slice-card.md`](templates/vertical-slice-card.md) for each slice.
 
