@@ -1,0 +1,4 @@
+interface:
+  display_name: "Debug with evidence"
+  short_description: "Diagnose failures with reproduction, competing hypotheses, and proof."
+  default_prompt: "Use $debug-with-evidence to reproduce this failure, compare falsifiable hypotheses, repair the supported cause, and prove the result."
