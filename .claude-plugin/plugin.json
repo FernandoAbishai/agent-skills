@@ -1,6 +1,7 @@
 {
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "fa-engineering",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Evidence-driven software engineering workflows for Claude Code.",
   "author": {"name": "Fernando Abishai", "url": "https://fernandoabishai.github.io/"},
   "homepage": "https://github.com/FernandoAbishai/agent-skills",
