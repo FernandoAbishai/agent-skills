@@ -1,0 +1,27 @@
+name: Validate skills
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate skill structure and links
+        run: python scripts/validate.py
+
+      - name: List skills through the public CLI
+        run: npx --yes skills@latest add . --list
