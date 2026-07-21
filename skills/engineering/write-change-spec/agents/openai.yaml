@@ -1,0 +1,6 @@
+interface:
+  display_name: "Write a change specification"
+  short_description: "Define observable software behavior and acceptance evidence."
+  default_prompt: "Use $write-change-spec to create an implementation-neutral specification with explicit requirements, negative behavior, and acceptance evidence."
+policy:
+  allow_implicit_invocation: false

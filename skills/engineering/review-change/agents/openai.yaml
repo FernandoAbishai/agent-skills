@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review a software change"
+  short_description: "Review intent, behavior, risk, and design as separate evidence lenses."
+  default_prompt: "Use $review-change to review this branch, pull request, or diff across intent, behavior, risk, and design with evidence-backed findings."

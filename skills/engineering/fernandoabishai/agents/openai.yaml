@@ -1,5 +1,6 @@
 interface:
   display_name: "Engineering workflow router"
   short_description: "Route engineering work to the smallest evidence-driven workflow."
+  default_prompt: "Use $fernandoabishai to route this software engineering task through the smallest trustworthy workflow and begin the first necessary stage."
 policy:
   allow_implicit_invocation: false

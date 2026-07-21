@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare release evidence"
+  short_description: "Assess release readiness with proof, monitoring, and rollback."
+  default_prompt: "Use $ship-with-evidence to prepare an evidence-backed release decision without performing the release action."

@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 # Clarify a Software Change
 
-Turn `$ARGUMENTS` and the current conversation into decisions strong enough to plan against. Ask only questions whose answers change behavior, scope, architecture, safety, or proof.
+Turn the user's request, current conversation, and available repository evidence into decisions strong enough to plan against. Ask only questions whose answers change behavior, scope, architecture, safety, or proof.
 
 Create a decision table covering actors and permissions, trigger and expected behavior, failure and recovery behavior, compatibility, data ownership, operational constraints, rollout, and rollback. Challenge each material assumption with a concrete edge case. Ask the highest-consequence unresolved question first and use repository evidence for lower-risk decisions.
 
