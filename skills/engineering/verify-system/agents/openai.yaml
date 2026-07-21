@@ -1,0 +1,4 @@
+interface:
+  display_name: "Verify the system story"
+  short_description: "Prove user-visible behavior across required runtime boundaries."
+  default_prompt: "Use $verify-system to exercise the complete runtime path, critical negative behavior, and record reproducible evidence."
