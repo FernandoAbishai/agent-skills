@@ -1,0 +1,12 @@
+{
+  "name": "fernandoabishai",
+  "owner": {"name": "Fernando Abishai", "url": "https://fernandoabishai.github.io/"},
+  "description": "Fernando Abishai engineering plugins for Claude Code.",
+  "plugins": [{
+    "name": "fa-engineering",
+    "source": "./",
+    "description": "Evidence-driven software engineering workflows for Claude Code.",
+    "category": "engineering",
+    "keywords": ["software-engineering", "agent-skills", "debugging", "code-review", "testing"]
+  }]
+}
