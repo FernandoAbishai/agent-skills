@@ -1,6 +1,6 @@
 ---
 name: fernandoabishai
-description: Route a software engineering task through this catalog. Invoke explicitly with a feature, bug, refactor, review, migration, or large initiative.
+description: Route a software engineering task through this catalog. Invoke explicitly with a feature, bug, refactor, review, migration, release decision, or large initiative.
 disable-model-invocation: true
 ---
 
@@ -8,28 +8,50 @@ disable-model-invocation: true
 
 Route `$ARGUMENTS` through the smallest workflow that can produce trustworthy evidence.
 
+Use [`templates/route-card.md`](templates/route-card.md) when the route is not obvious or spans multiple stages.
+
 ## Governing rule
 
-A coding agent may propose freely, but it may only claim success when the relevant system boundary has been exercised and the result recorded.
+A coding agent may propose freely, but it may only claim success after exercising the relevant system boundary and recording the result.
 
-## Routes
+## Classify the work
 
-- Unclear change: `clarify-change` → `write-change-spec` → `plan-delivery`.
-- Defined feature: `plan-delivery` → `implement-change` → `review-change` → `verify-system` → `ship-with-evidence`.
-- Bug or regression: `debug-with-evidence` → `implement-change` → `review-change` → `verify-system`.
-- Pull request: `review-change`; add `verify-system` when runtime proof is missing.
-- Release decision: `verify-system` → `ship-with-evidence`.
-- Unknown repository: begin with `setup-engineering-context`.
+Choose the closest class based on the user's actual request and available evidence:
 
-## Routing rules
+| Class | Typical signals | Default route |
+|---|---|---|
+| Unknown repository | No verified commands, architecture, or test entry points | `setup-engineering-context` |
+| Unclear change | Behavior, scope, constraints, or safety decisions conflict | `clarify-change → write-change-spec → plan-delivery` |
+| Defined feature | Outcome is clear but delivery and proof are not | `plan-delivery → implement-change → review-change → verify-system` |
+| Bug or regression | Existing behavior is broken, intermittent, slow, or wrong | `debug-with-evidence → implement-change → verify-system` |
+| Pull request or branch | The user requests review of existing changes | `review-change`, then `verify-system` when runtime proof is missing |
+| Release decision | Implementation exists and readiness must be assessed | `verify-system → ship-with-evidence` |
+| Large initiative | The work exceeds one safe implementation session | clarify/specify first; plan only the next independently verifiable slices |
 
-State the route, reason, and success evidence in one compact block, then begin the first skill immediately. Do not force the entire lifecycle onto a trivial, explicit change. Re-route when evidence changes the classification.
+## Route selection rules
 
-Never push, merge, deploy, alter production data, rotate secrets, or run destructive migrations without explicit authorization.
+1. **Use the smallest useful route.** Do not impose the full lifecycle on a trivial, explicit change.
+2. **Begin where uncertainty begins.** Do not repeat clarification when a complete specification already exists.
+3. **Prefer evidence over ceremony.** Include a stage only when it resolves a real unknown or produces necessary proof.
+4. **Re-route when classification changes.** A feature request that reveals an existing defect may require `debug-with-evidence`.
+5. **Separate work from authorization.** Selecting a workflow does not authorize pushes, merges, deployments, production writes, secret rotation, or destructive migrations.
+
+## Start the workflow
+
+State a compact Route Card containing:
+
+- task classification;
+- selected route;
+- why each included stage is necessary;
+- which plausible stages were excluded;
+- the success evidence expected at the end;
+- any authorization boundary relevant to the task.
+
+Then begin the first skill immediately. Do not stop after recommending a route unless the user asked only for routing advice.
 
 ## Completion criterion
 
-Routing is complete when the first selected skill is active, unnecessary skills are excluded, and the success signal is explicit.
+Routing is complete when the first selected skill is active, unnecessary stages are excluded, the completion evidence is explicit, and no action authority has been inferred from workflow selection.
 
 ## Communication
 
