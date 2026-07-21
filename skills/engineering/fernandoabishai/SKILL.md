@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 # Fernando Abishai Engineering Router
 
-Route `$ARGUMENTS` through the smallest workflow that can produce trustworthy evidence.
+Route the user's request, current conversation, and available repository evidence through the smallest workflow that can produce trustworthy evidence.
 
 Use [`templates/route-card.md`](templates/route-card.md) when the route is not obvious or spans multiple stages.
 
